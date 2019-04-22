@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import Button from './components/common/Button';
 import Firebase from './helpers/firebase';
-import './App.css';
+import Main from './components/Pages/main';
+//import './App.css';
 
 
 
 class App extends Component {
 
   componentDidMount(){
-    this.testFirebase('kennefritzon@gmail.com','123456fritzpass');
+    //this.testFirebase('kennefritzon@gmail.com','123456fritzpass');
   }
   
   testFirebase = async (email,password) => {
@@ -19,14 +20,15 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Button
+        <Main />
+       {/*<Button
           size='large'
           type='primary'
           label='Login'
           icon='check'
           onClick={() => alert('click on button')}
           //loading
-         />
+       />*/}
       </div>
     );
   }
