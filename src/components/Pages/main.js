@@ -3,6 +3,7 @@ import { Layout } from 'antd';
 import PageHeader from './header';
 import PageFooter from './footer';
 import SideBar from './sideNav';
+import Input from '../common/Input';
 
 const {
     Content,
@@ -20,23 +21,22 @@ class Main extends Component {
             <Layout>
                 <SideBar />
                 <Layout style={{ marginLeft: 200 }}>
-                    <PageHeader />
-                    <Content style={{ margin: '24px 16px 0', overflow: 'initial' }}>
-                        <div style={{ padding: 24, background: '#fff', textAlign: 'center' }}>
-                            ...
-          <br />
-                            Really
-          <br />...<br />...<br />...<br />
-                            long
-          <br />...<br />...<br />...<br />...<br />...<br />...
-          <br />...<br />...<br />...<br />...<br />...<br />...
-          <br />...<br />...<br />...<br />...<br />...<br />...
-          <br />...<br />...<br />...<br />...<br />...<br />...
-          <br />...<br />...<br />...<br />...<br />...<br />...
-          <br />...<br />...<br />...<br />...<br />...<br />...
-          <br />...<br />...<br />...<br />...<br />...<br />
-                            content
-        </div>
+                    <PageHeader
+                      style={{
+                          height:'10vh'
+                      }}
+                     />
+                    <Content style={{ margin: '24px 16px 0', overflow: 'initial',height:'85vh' }}>
+                        <div style={{ padding: 24, background: '#fff', textAlign: 'center',height: '98%' }}>
+                          <Input
+                            placeholder="Entrez votre nom"
+                            prefix //when true Input has a prefixed icon
+                            prefixIconType="user"
+                            suffix //when true Input has a suffixed icon to give a user more informations about him
+                            suffixDescription="ce champ represente le nom de l'utilisateur"
+                            suffixIconType="info-circle"
+                          />
+                        </div>
                     </Content>
                     <PageFooter />
                 </Layout>
