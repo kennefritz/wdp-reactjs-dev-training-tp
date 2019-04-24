@@ -1,24 +1,9 @@
 import React, { Component } from 'react';
-import { Input, Tooltip, Icon, Select } from 'antd';
+import PropTypes from 'prop-types'; 
+import { Input, Tooltip, Icon } from 'antd';
 
-const Option = Select.Option;
 const Search = Input.Search;
 const { TextArea } = Input;
-const selectBefore = (
-  <Select defaultValue="Http://" style={{ width: 90 }}>
-    <Option value="Http://">Http://</Option>
-    <Option value="Https://">Https://</Option>
-  </Select>
-);
-const selectAfter = (
-  <Select defaultValue=".com" style={{ width: 80 }}>
-    <Option value=".com">.com</Option>
-    <Option value=".jp">.jp</Option>
-    <Option value=".cn">.cn</Option>
-    <Option value=".org">.org</Option>
-  </Select>
-);
-
 
 class EMCInput extends Component {
   render() {
@@ -69,5 +54,22 @@ class EMCInput extends Component {
       />
     )
   }
+}
+
+EMCInput.propTypes = {
+  placeholder: PropTypes.string,
+  prefix: PropTypes.bool,
+  suffix: PropTypes.bool,
+  prefixIconType: PropTypes.string,
+  suffixDescription: PropTypes.string,
+  suffixIconType: PropTypes.string,
+  addOnBefore: PropTypes.bool,
+  beforeText: PropTypes.string,
+  addOnAfter: PropTypes.bool,
+  afterText: PropTypes.string,
+  onSearch: PropTypes.func,
+  enterButtonText: PropTypes.string,
+  size: PropTypes.string,
+  type: PropTypes.string,
 }
 export default EMCInput;

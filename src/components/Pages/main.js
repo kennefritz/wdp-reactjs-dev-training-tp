@@ -23,7 +23,7 @@ class Main extends Component {
                 <Layout style={{ marginLeft: 200 }}>
                     <PageHeader
                       style={{
-                          height:'10vh'
+                          height:'5vh'
                       }}
                      />
                     <Content style={{ margin: '24px 16px 0', overflow: 'initial',height:'85vh' }}>
